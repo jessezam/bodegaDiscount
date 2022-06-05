@@ -2,7 +2,7 @@
 
 In November 2021, Bodega, an online sneaker/fashion shop [tweeted a picture containing a crambled discount code worth $200](https://twitter.com/bodega/status/1455624553418403844). It was 8 random letters and whoever could figure out the correct order by trying different combinations during checkout would get $200 off their order. Bodega has lots of cools shoes and clothing, so I started guessing random codes. After realizing that I'm not nearly lucky enough to guess the code in a few tries, I decided to write a script that would help me through this process. I didn't want to spend too long on it as everyone who saw the tweet was already trying codes and, well, it was for only $200 after all. 
 
-##Approach##
+##Approach
 To work as quickly as possible, I wanted to rely on existing tools to handle most of the work for me. The given characters in the picture appeared to be CGQYTHZL. I googled 'string shuffler' and used an online tool to get all the possible combinations of those letters. I took those combinations and put them into a text file called [list.txt](list.txt) with each combination on a new line. 
 
 Then I went to Bodega.com in my browser and added something over $200 to my cart. I went to the checkout page where the code would be entered. I then grabbed this URL and added `&discount=' to the end of it. Using the search and replace feature in VS Code, I was able to quickly add this URL to the beginning of each line in list.txt. 
